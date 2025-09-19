@@ -24,10 +24,14 @@ sns.set_theme(style="whitegrid")
 # -------------------------
 # 1. Load Data
 # -------------------------
+import os
+
+  # directory of app.py
 @st.cache_data
 def load_data():
-    restaurants = pd.read_csv("app/Restaurant names and Metadata.csv")
-    reviews = pd.read_csv("app/Zomato Restaurant reviews.csv")
+    BASE_DIR = "/Users/madhutomar/PycharmProjects/Zomato_Restaurant_Clustering_Sentiment/app"
+    restaurants = pd.read_csv(os.path.join(BASE_DIR, "Restaurant names and Metadata.csv"))
+    reviews = pd.read_csv(os.path.join(BASE_DIR, "Zomato Restaurant reviews.csv"))
     return restaurants, reviews
 
 restaurants, reviews = load_data()
