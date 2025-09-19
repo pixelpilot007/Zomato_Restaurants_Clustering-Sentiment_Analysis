@@ -26,8 +26,8 @@ sns.set_theme(style="whitegrid")
 # -------------------------
 @st.cache_data
 def load_data():
-    restaurants = pd.read_csv("datasets/Restaurant names and Metadata.csv")
-    reviews = pd.read_csv("datasets/Zomato Restaurant reviews.csv")
+    restaurants = pd.read_csv("Restaurant names and Metadata.csv")
+    reviews = pd.read_csv("Zomato Restaurant reviews.csv")
     return restaurants, reviews
 
 restaurants, reviews = load_data()
