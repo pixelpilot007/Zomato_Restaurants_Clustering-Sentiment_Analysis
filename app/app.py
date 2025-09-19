@@ -86,11 +86,11 @@ elif page == "Visualization":
     with col1:
         st.caption("💰 Expensive Restaurants")
         wc = WordCloud(width=400, height=300, background_color="white", colormap="Reds").generate(" ".join(expensive['Cuisines'].dropna()))
-        st.image(wc.to_array(), use_container_width=True)
+        st.image(wc.to_image(), use_container_width=True)
     with col2:
         st.caption("💸 Cheap Restaurants")
         wc = WordCloud(width=400, height=300, background_color="white", colormap="Blues").generate(" ".join(cheap['Cuisines'].dropna()))
-        st.image(wc.to_array(), use_container_width=True)
+        st.image(wc.to_image(), use_container_width=True)
 
     # Rating vs Review Length
     st.subheader("⭐ Rating vs Review Length")
