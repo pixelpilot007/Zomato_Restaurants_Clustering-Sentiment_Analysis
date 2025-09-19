@@ -83,14 +83,24 @@ elif page == "Visualization":
     cheap = restaurants[restaurants['Cost'] <= restaurants['Cost'].median()]
 
     col1, col2 = st.columns(2)
+
     with col1:
         st.caption("💰 Expensive Restaurants")
-        wc = WordCloud(width=400, height=300, background_color="white", colormap="Reds").generate(" ".join(expensive['Cuisines'].dropna()))
-        st.image(wc.to_image(), use_container_width=True)
+        text_expensive = " ".join(expensive['Cuisines'].dropna())
+        if text_expensive.strip():  # only if non-empty
+            wc = WordCloud(width=400, height=300, background_color="white", colormap="Reds").generate(text_expensive)
+            st.image(wc.to_image(), use_container_width=True)
+        else:
+            st.warning("No cuisines found for expensive restaurants.")
+
     with col2:
         st.caption("💸 Cheap Restaurants")
-        wc = WordCloud(width=400, height=300, background_color="white", colormap="Blues").generate(" ".join(cheap['Cuisines'].dropna()))
-        st.image(wc.to_image(), use_container_width=True)
+        text_cheap = " ".join(cheap['Cuisines'].dropna())
+        if text_cheap.strip():
+            wc = WordCloud(width=400, height=300, background_color="white", colormap="Blues").generate(text_cheap)
+            st.image(wc.to_image(), use_container_width=True)
+        else:
+            st.warning("No cuisines found for cheap restaurants.")
 
     # Rating vs Review Length
     st.subheader("⭐ Rating vs Review Length")
