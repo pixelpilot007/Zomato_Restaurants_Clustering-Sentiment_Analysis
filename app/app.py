@@ -89,7 +89,7 @@ elif page == "Visualization":
         text_expensive = " ".join(expensive['Cuisines'].dropna())
         if text_expensive.strip():  # only if non-empty
             wc = WordCloud(width=400, height=300, background_color="white", colormap="Reds").generate(text_expensive)
-            st.image(wc.to_array(), use_column=True)
+            st.image(wc.to_array(), use_column_width=True)
         else:
             st.warning("No cuisines found for expensive restaurants.")
 
