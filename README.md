@@ -27,13 +27,21 @@ Framework: Streamlit
 Version Control & Deployment: GitHub, Streamlit Cloud
 
 📂 Project Structure
+
 Zomato_Clustering_Sentiment_Analysis/ # Dataset(s)
+
 │── notebooks/                # Jupyter notebooks for exploration
+
 │── app/                      # Streamlit app code
-│   ├── app.py
+
+    ├── app.py
+
     │── csv files
+    
 │── notebooks/
+
 │── requirements.txt          # Python dependencies
+
 │── README.md                 # Project documentation
 
 
