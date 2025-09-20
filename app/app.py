@@ -89,7 +89,7 @@ elif page == "Visualization":
         text_expensive = " ".join(expensive['Cuisines'].dropna())
         if text_expensive.strip():  # only if non-empty
             wc = WordCloud(width=400, height=300, background_color="white", colormap="Reds").generate(text_expensive)
-            st.image(np.array(wc.to_image()), use_container_width=True)
+            st.image(wc.to_array(), use_container_width=True)
         else:
             st.warning("No cuisines found for expensive restaurants.")
 
@@ -98,7 +98,7 @@ elif page == "Visualization":
         text_cheap = " ".join(cheap['Cuisines'].dropna())
         if text_cheap.strip():
             wc = WordCloud(width=400, height=300, background_color="white", colormap="Blues").generate(text_cheap)
-            st.image(np.array(wc.to_image()), use_container_width=True)
+            st.image(wc.to_array(), use_container_width=True)
         else:
             st.warning("No cuisines found for cheap restaurants.")
 
