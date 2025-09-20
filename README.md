@@ -5,10 +5,15 @@ This project applies Machine Learning and Natural Language Processing (NLP) tech
 🚀 Features
 
 🔹 Clustering with ML – Groups restaurants based on cost, ratings, and metadata using KMeans.
+
 🔹 Sentiment Analysis with NLP – Analyzes customer reviews using NLTK, TextBlob, and VADER to classify sentiments.
+
 🔹 Interactive Visualizations – Explore clusters and sentiment distributions with Matplotlib, Seaborn, and Plotly.
+
 🔹 Data Wrangling – Clean and preprocess data with Pandas and NumPy.
+
 🔹 Streamlit Web App – Intuitive interface for clustering, sentiment analysis, and visualization.
+
 🔹 Deployment – Hosted on Streamlit Cloud with GitHub integration for CI/CD.
 
 🛠 Tech Stack
