@@ -28,11 +28,11 @@ Version Control & Deployment: GitHub, Streamlit Cloud
 
 📂 Project Structure
 
-Zomato_Clustering_Sentiment_Analysis/ # Dataset(s)
+Zomato_Clustering_Sentiment_Analysis/        # Dataset(s)
 
-│── notebooks/                # Jupyter notebooks for exploration
+│── notebooks/                               # Jupyter notebooks for exploration
 
-│── app/                      # Streamlit app code
+│── app/                                    # Streamlit app code
 
     ├── app.py
 
@@ -40,9 +40,9 @@ Zomato_Clustering_Sentiment_Analysis/ # Dataset(s)
     
 │── notebooks/
 
-│── requirements.txt          # Python dependencies
+│── requirements.txt                        # Python dependencies
 
-│── README.md                 # Project documentation
+│── README.md                               # Project documentation
 
 
 
